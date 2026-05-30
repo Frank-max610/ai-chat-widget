@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Chat Widget — 网站智能客服，一行代码接入</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f0f23;color:#e0e0e0;line-height:1.7}
+.hero{text-align:center;padding:100px 20px 60px;background:linear-gradient(135deg,#1a1a3e,#0f0f23)}
+.hero h1{font-size:3em;background:linear-gradient(90deg,#6366f1,#a78bfa,#6366f1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:16px}
+.hero p{font-size:1.3em;color:#8892b0;max-width:700px;margin:0 auto 32px}
+.btn{display:inline-block;padding:14px 36px;border-radius:12px;font-size:16px;font-weight:700;text-decoration:none;transition:.2s;cursor:pointer;border:none}
+.btn-primary{background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(99,102,241,.4)}
+.btn-outline{background:transparent;border:2px solid #6366f1;color:#6366f1;margin-left:12px}
+.btn-outline:hover{background:#6366f1;color:#fff}
+.code-block{background:#1e1e32;border-radius:12px;padding:20px 24px;margin:20px auto;max-width:700px;text-align:left;font-family:'Fira Code',monospace;font-size:13px;color:#a5b4fc;overflow-x:auto;border:1px solid #2a2a4a}
+.pricing{max-width:400px;margin:60px auto;text-align:center;background:#1e1e32;border-radius:20px;padding:40px;border:2px solid #6366f1}
+.pricing .price{font-size:3em;font-weight:900;color:#6366f1}
+.pricing .per{color:#8892b0}
+.pricing ul{list-style:none;margin:24px 0;text-align:left}
+.pricing li{padding:8px 0;font-size:15px}
+.pricing li::before{content:'✓ ';color:#10b981;font-weight:700}
+.features{max-width:1000px;margin:60px auto;padding:0 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.card{background:#1e1e32;border-radius:14px;padding:28px;border:1px solid #2a2a4a}
+.card .icon{font-size:2em;margin-bottom:12px}
+.card h3{color:#e0e0e0;margin-bottom:8px}
+.card p{color:#8892b0;font-size:14px}
+.faq{max-width:700px;margin:40px auto;padding:0 20px}
+.faq h2{text-align:center;margin-bottom:24px;color:#a5b4fc}
+.faq-item{background:#1e1e32;border-radius:12px;padding:20px;margin-bottom:12px;border:1px solid #2a2a4a}
+.faq-item h4{color:#e0e0e0;margin-bottom:6px}
+.faq-item p{color:#8892b0;font-size:14px}
+.cta{text-align:center;padding:60px 20px}
+.footer{text-align:center;padding:40px;color:#666;font-size:13px}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>&#x1f916; AI Chat Widget</h1>
+  <p>一行代码，给任何网站加上 AI 智能客服。<br>基于 DeepSeek，5 分钟部署，数据私有，终身买断。</p>
+  <a href="#buy" class="btn btn-primary">&#x1f4b0; 立即购买 — $10</a>
+  <a href="#demo" class="btn btn-outline">&#x1f4d6; 查看文档</a>
+</div>
+
+<div style="text-align:center;margin:20px">
+  <p style="color:#8892b0;font-size:14px">&#x26a1; 一行代码接入你的网站：</p>
+</div>
+<div class="code-block">
+&lt;script src="<span style="color:#f59e0b">http://你的服务器:5000/static/chat-widget.js</span>"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6366f1">data-server</span>="<span style="color:#f59e0b">http://你的服务器:5000</span>"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6366f1">data-title</span>="<span style="color:#f59e0b">AI 客服助手</span>"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#6366f1">data-color</span>="<span style="color:#f59e0b">#4F46E5</span>"&gt;<br>
+&lt;/script&gt;
+</div>
+
+<div class="features">
+  <div class="card">
+    <div class="icon">&#x26a1;</div>
+    <h3>一行接入</h3>
+    <p>复制一行标签，AI 聊天功能即刻上线。不需改动你的网站代码。</p>
+  </div>
+  <div class="card">
+    <div class="icon">&#x1f3a8;</div>
+    <h3>完全自定义</h3>
+    <p>颜色、标题、Logo 全部可配，完美匹配你的品牌风格。</p>
+  </div>
+  <div class="card">
+    <div class="icon">&#x1f4b0;</div>
+    <h3>极低成本</h3>
+    <p>DeepSeek API 每条对话不到 1 分钱。无月费，一次性买断。</p>
+  </div>
+  <div class="card">
+    <div class="icon">&#x1f512;</div>
+    <h3>数据私有</h3>
+    <p>数据全部存在你服务器上，不经过任何第三方。不用担心泄露。</p>
+  </div>
+  <div class="card">
+    <div class="icon">&#x1f4e6;</div>
+    <h3>开箱即用</h3>
+    <p>配好 API Key 就跑，3 个文件搞定一切。Python + Flask。</p>
+  </div>
+  <div class="card">
+    <div class="icon">&#x1f310;</div>
+    <h3>流式输出</h3>
+    <p>支持 SSE 流式返回，打字机效果。用户体验丝滑流畅。</p>
+  </div>
+</div>
+
+<div id="buy" class="pricing">
+  <p style="color:#8892b0;margin-bottom:8px">一次性买断 · 终身使用</p>
+  <div class="price">$10</div>
+  <div class="per">≈ ¥72</div>
+  <ul>
+    <li>完整源码（前端 + 后端 + Demo）</li>
+    <li>部署指南 + 技术文档</li>
+    <li>30 天技术支持</li>
+    <li>免费更新</li>
+    <li>商用授权</li>
+  </ul>
+  <a href="https://github.com/Frank-max610/ai-chat-widget" class="btn btn-primary" style="display:block">&#x2b07; GitHub 下载（开源免费版）</a>
+  <p style="color:#666;font-size:12px;margin-top:12px">如需商用授权与技术部署支持，请通过 GitHub Issues 或邮件联系作者。</p>
+</div>
+
+<div class="faq" id="demo">
+  <h2>&#x2753; 常见问题</h2>
+  <div class="faq-item">
+    <h4>需要什么技术基础？</h4>
+    <p>会复制粘贴 + 会申请 DeepSeek API Key（免费），五分钟搞定。</p>
+  </div>
+  <div class="faq-item">
+    <h4>支持哪些网站？</h4>
+    <p>纯 HTML、WordPress、Vue/React/Next.js、小程序 WebView — 反正只要是网页都支持。</p>
+  </div>
+  <div class="faq-item">
+    <h4>能定制聊天机器人角色吗？</h4>
+    <p>能。改 .env 里的 SYSTEM_PROMPT，设成客服、销售、技术支持随你。</p>
+  </div>
+  <div class="faq-item">
+    <h4>服务器要什么配置？</h4>
+    <p>1 核 512M 最低配云服务器就够了，阿里云/腾讯云几十块一个月。</p>
+  </div>
+</div>
+
+<div class="cta">
+  <a href="https://github.com/Frank-max610/ai-chat-widget" class="btn btn-primary" style="font-size:18px;padding:16px 48px">&#x2b50; GitHub 查看源码</a>
+  <p style="color:#666;margin-top:16px">觉得有用？给个 Star &#x2b50; 支持作者 | 商业合作/定制开发请联系</p>
+</div>
+
+<div class="footer">
+  <p>Built with &#x2764; | AI Chat Widget v1.0 | MIT License</p>
+</div>
+
+</body>
+</html>
