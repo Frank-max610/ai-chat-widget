@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Chat Widget — Demo</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f0f2f5;min-height:100vh}
+.hero{text-align:center;padding:80px 20px 40px;background:linear-gradient(135deg,#4F46E5,#7C3AED);color:#fff}
+.hero h1{font-size:2.5em;margin-bottom:12px}
+.hero p{font-size:1.2em;opacity:.9;max-width:600px;margin:0 auto}
+.features{max-width:900px;margin:40px auto;padding:0 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.feature-card{background:#fff;border-radius:14px;padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.feature-card .icon{font-size:2em;margin-bottom:12px}
+.feature-card h3{margin-bottom:8px;color:#333}
+.feature-card p{color:#666;font-size:14px;line-height:1.6}
+.footer{text-align:center;padding:40px;color:#999;font-size:13px}
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1>&#x1f916; AI Chat Widget</h1>
+  <p>一行代码，给你的网站加上 AI 智能客服。基于 DeepSeek，5 分钟部署。</p>
+</div>
+<div class="features">
+  <div class="feature-card">
+    <div class="icon">&#x26a1;</div>
+    <h3>一行接入</h3>
+    <p>复制一行 &lt;script&gt; 标签到你的网站，AI 聊天功能即刻上线。</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">&#x1f3a8;</div>
+    <h3>完全自定义</h3>
+    <p>颜色、标题、欢迎语、Logo 全部可配，完美匹配你的品牌风格。</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">&#x1f4b0;</div>
+    <h3>极低成本</h3>
+    <p>基于 DeepSeek API，单条对话成本不到 1 分钱。部署在你自己服务器上，无月费。</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">&#x1f310;</div>
+    <h3>支持流式输出</h3>
+    <p>打字机效果，逐字返回，用户体验丝滑。支持任何网站和框架。</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">&#x1f512;</div>
+    <h3>数据私有</h3>
+    <p>你的数据不过第三方，全部存在你自己的服务器上。</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">&#x1f4e6;</div>
+    <h3>开箱即用</h3>
+    <p>配好 API Key 就跑，自带完整后端。Python + Flask，3 个文件搞定一切。</p>
+  </div>
+</div>
+<div class="footer">
+  <p>点击右下角机器人图标，体验 AI 客服对话</p>
+</div>
+
+<!-- AI Chat Widget -->
+<script src="../widget/chat-widget.js"
+        data-server="http://localhost:5000"
+        data-title="AI 客服助手"
+        data-placeholder="有什么可以帮你的？"
+        data-color="#4F46E5"
+        data-logo="&#x1f916;">
+</script>
+</body>
+</html>
